@@ -1,0 +1,143 @@
+/* GENERAL */
+main {
+    max-width: 100%;
+    margin: auto;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+.test{
+    margin: 300px;
+
+}
+
+/* FONTS */
+@font-face {
+    font-family: AlbertBlack;
+    src: url("fonts/AlbertSans-Black.ttf");
+  }
+  
+  @font-face {
+    font-family: AlbertBlack;
+    src: url("fonts/AlbertSans-Bold.ttf");
+  }
+  
+  @font-face {
+    font-family: AlbertRegular;
+    src: url("fonts/AlbertSans-Regular.ttf");
+  }
+
+  h1,
+  h3,
+  ul,
+  li{
+    font-family: 'AlbertBlack';
+  }
+
+p{
+    font-family: 'AlbertRegular';
+}
+
+nav ul .dropdown li a {
+    font-family: 'AlbertRegular';
+  }
+
+  h3{
+    font-size: 1.7rem;
+    margin-top: 50px;
+  }
+
+
+/* MENU */
+.header-menu {
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #34495E;
+    padding: 10px 10px;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+
+  .menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+  }
+
+  .dropdown {
+    display: none;
+    position: absolute;
+    background-color: #34495E;
+    padding: 10px 0;
+    min-width: 150px;
+    z-index: 20;
+    list-style: none;
+  }
+
+  .dropdown li {
+    padding: 5px 20px;
+  }
+  
+  .has-dropdown:hover .dropdown {
+    display: block;
+  }
+
+/* FOOTER */
+.footer {
+    background-color: #34495E;
+    color: white;
+    padding: 4% 5%;
+  }
+
+  .footer-menu-direction{
+    flex-direction: column;  
+    align-content: left;
+    list-style: none;
+    margin-top: 0px;
+}
+
+.footer-menu-direction a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    line-height: 200%;
+}
+
+
+
+@media (width > 800px) {
+    .footer {
+        background-color: #34495E;
+        color: white;
+        padding: 4% 5%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+
+      h3{
+        font-size: 1.7rem;
+        margin-top: 0px;
+      }
+}
