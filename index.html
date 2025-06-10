@@ -9,68 +9,94 @@
   </head>
 
 <body>
-    <header>
-        <div class="header-menu">
-            <nav>
-              <ul class="menu">
-                <li><a href="index.html">FORSIDE</a></li>
-    
-                <li class="has-dropdown">
-                  <a href="">TEMAER ▾</a>
-                  <ul class="dropdown">
+
+<!-- MENU -->
+<header>
+    <nav class="menu">
+        <img src="img/logo.png" alt="MR" class="logo-menu">
+        <ul class="nav-menu">
+            <li><a href="index.html">FORSIDE</a></li>
+            <li class="dropdown">
+                <a href="index.html">TEMAER ▾</a>
+                <ul class="dropdown-menu">
                     <li><a href="index.html">Tema 1</a></li>
                     <li><a href="index.html">Tema 2</a></li>
                     <li><a href="index.html">Tema 3</a></li>
                     <li><a href="index.html">Tema 4</a></li>
                     <li><a href="index.html">Tema 5</a></li>
-                  </ul>
-                </li>
-    
-                <li><a href="index.html">OM MIG</a></li>
-    
-              </ul>
-              <div class="burger">
-                <div class="line"></div>
-                <div class="line"></div>
-                <div class="line"></div>
-              </div>
-            </nav>
-          </div>
-    
-          <div class="banner-img">
-            <img src="lottie.html" alt="lottie" class="lottie" />
-          </div>
-    </header>
+                </ul>
+            </li>
+            <li><a href="index.html">OM MIG</a></li>
+        </ul>
 
-    <main>
+        <div class="burger-menu" id="burger-menu">
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+            <div class="burger-line"></div>
+        </div>
+    </nav>
 
-        <p class="test">test</p>
-
-    </main>
-
-    <footer>
-        <footer class="footer">
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-main-menu-link">FORSIDE</a>
+            
             <div>
-              <h1>KONTAKT</h1>
-              <br />
-              <p>Marius Raabjerg<br /><br />Tlf.: 50 70 09 30 <br> <br> Email: mara0017@stud.kea.dk</p>
+                <div class="mobile-main-menu-link">TEMAER</div>
+                <div class="mobile-sub-menu">
+                    <a href="index.html" class="mobile-sub-menu-link">Tema 1</a>
+                    <a href="index.html" class="mobile-sub-menu-link">Tema 2</a>
+                    <a href="index.html" class="mobile-sub-menu-link">Tema 3</a>
+                    <a href="index.html" class="mobile-sub-menu-link">Tema 4</a>
+                    <a href="index.html" class="mobile-sub-menu-link">Tema 5</a>
+                </div>
             </div>
-            <div>
-                <h3>TEMAER</h3>
-                <div class="footer-menu">
-                    <nav">
-                      <ul class="footer-menu-direction">
-                      <li><a href="index.html">Tema 1</a></li>
-                      <li><a href="index.html">Tema 2</a></li>
-                      <li><a href="index.html">Tema 3</a></li>
-                      <li><a href="index.html">Tema 4</a></li>
-                      <li><a href="index.html">Tema 5</a></li>
-                    </ul>
-                  </li>
+            
+            <a href="index.html" class="mobile-main-menu-link">OM MIG</a>
+        </div>
+    </div>
+
+</header>
+
+
+<!-- MAIN -->
+<main>
+    <p class="test">test</p>
+</main>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container-footer">
+
+        <img src="img/logo.png" alt="MR" class="logo-footer">
+
+        <div class="footer-kontakt">
+            <h3>KONTAKT</h3>
+            <div class="kontakt-text">
+                <p>Marius Raabjerg</p>
+                <p>Tlf.: 12 34 56 78</p>
+                <p>Email: marius@kea.dk</p>
             </div>
-          </footer>
-          <script src="script.js"></script>
-        </body>
-    </footer>
+        </div>
+
+        <div class="footer-menu">
+            <h3>TEMAER</h3>
+            <ul class="menu-text">
+                <li><a href="index.html">Tema 1</a></li>
+                <li><a href="index.html">Tema 2</a></li>
+                <li><a href="index.html">Tema 3</a></li>
+                <li><a href="index.html">Tema 4</a></li>
+                <li><a href="index.html">Tema 5</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>©Marius Raabjerg</p>
+    </div>
+    
+</footer>
+    
+<script src="script.js"></script>
 
 </body>

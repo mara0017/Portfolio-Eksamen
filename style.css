@@ -1,6 +1,6 @@
 /* GENERAL */
 main {
-    max-width: 100%;
+    max-width: 80%;
     margin: auto;
   }
 
@@ -12,16 +12,22 @@ main {
 
   img {
     max-width: 100%;
-    height: auto;
     display: block;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    height: auto;
   }
   
 .test{
     margin: 300px;
 
 }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
 
 /* FONTS */
 @font-face {
@@ -48,6 +54,10 @@ main {
 
 p{
     font-family: 'AlbertRegular';
+    margin-bottom: 15px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    line-height: 100%;
 }
 
 nav ul .dropdown li a {
@@ -57,51 +67,136 @@ nav ul .dropdown li a {
   h3{
     font-size: 1.7rem;
     margin-top: 50px;
-  }
+} 
 
 
 /* MENU */
-.header-menu {
-    max-width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.logo-menu{
+    max-width: 15%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.menu {
     background-color: #34495E;
-    padding: 10px 10px;
-  }
-  
-  .menu {
-    list-style: none;
     display: flex;
-    gap: 50px;
-    margin-top: 7px;
-    margin-bottom: 7px;
-  }
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
 
-  .menu a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.1rem;
-    letter-spacing: 2px;
-  }
-
-  .dropdown {
+.nav-menu {
     display: none;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 10%;
+}
+
+/* DROPDOWN */
+.dropdown-menu {
     position: absolute;
     background-color: #34495E;
-    padding: 10px 0;
-    min-width: 150px;
-    z-index: 20;
     list-style: none;
-  }
+    min-width: 150px;
+    visibility: hidden;
+    padding: 10px;
+}
 
-  .dropdown li {
+.dropdown:hover .dropdown-menu {
+    visibility: visible;
+}
+
+.dropdown-menu li {
     padding: 5px 20px;
-  }
-  
-  .has-dropdown:hover .dropdown {
+}
+
+/* BURGER MENU */
+.burger-menu {
+    flex-direction: column;
+    padding-right: 5px;
+}
+
+.burger-line {
+    width: 40px;
+    height: 5px;
+    background-color: white;
+    margin: 5px 0;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* BURGER MENU MOBILE OVERLAY */
+.mobile-menu {
+    position: fixed;
+    top: 10%;
+    width: 100%;
+    height: 100%;
+    background-color: #34495E;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.mobile-menu.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-menu-content {
+    text-align: center;
+}
+
+.mobile-main-menu-link {
     display: block;
-  }
+    color: white;
+    text-decoration: none;
+    font-size: 1.7rem;
+    letter-spacing: 3px;
+    margin-top: 60px;
+    transition: all 0.3s ease;
+    font-family: 'AlbertBlack';
+}
+
+.mobile-sub-menu-link {
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    margin: 10px 0;
+    transition: all 0.3s ease;
+    font-family: 'AlbertRegular';
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+
+/* BURGER MENU ANIMATION */
+.burger-menu.active .burger-line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.burger-menu.active .burger-line:nth-child(2) {
+    display: none;
+}
+
+.burger-menu.active .burger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+
 
 /* FOOTER */
 .footer {
@@ -109,35 +204,86 @@ nav ul .dropdown li a {
     color: white;
     padding: 4% 5%;
   }
-
-  .footer-menu-direction{
-    flex-direction: column;  
-    align-content: left;
-    list-style: none;
-    margin-top: 0px;
+  
+  .logo-footer{
+    max-width: 30%;
+    align-items: center;
+    margin-top: 20px;
 }
 
-.footer-menu-direction a{
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.menu-text {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.menu-text a{
     text-decoration: none;
     color: white;
-    font-size: 1.1rem;
+    font-family: 'AlbertRegular';
     letter-spacing: 2px;
     line-height: 200%;
 }
 
+.copyright {
+    border-top: 1px solid #4A5F7A;
+    padding-top: 30px;
+    width: 100%;
+    text-align: center;
+}
+
+.copyright p {
+    font-size: 0.8rem;
+    color: white;
+}
 
 
+
+
+/* MEDIA QUERY */
 @media (width > 800px) {
-    .footer {
-        background-color: #34495E;
-        color: white;
-        padding: 4% 5%;
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        gap: 40px;
+    }
+    
+    .burger-menu{
+        display: none;
+    }
+
+    .logo-menu{
+        max-width: 7%;
+        padding-top: -20px;
+    }
+
+    .container-footer{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-      }
+        align-items: start;
+    }
 
-      h3{
-        font-size: 1.7rem;
+    h3{
         margin-top: 0px;
-      }
+        margin-bottom: 10px;
+    }
+
+    p{
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+        line-height: 200%;
+    }
+
+    .logo-footer{
+        max-width: 30%;
+        align-items: center;
+        margin-top: 0px;
+    }
+
 }
