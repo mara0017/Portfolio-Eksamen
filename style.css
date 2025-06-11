@@ -1,6 +1,6 @@
 /* GENERAL */
 main {
-    max-width: 80%;
+    max-width: 100%;
     margin: auto;
   }
 
@@ -27,7 +27,9 @@ main {
     padding: 0 20px;
 }
 
-
+section img{
+    margin: 10px 0px;
+}
 
 /* FONTS */
 @font-face {
@@ -47,12 +49,39 @@ main {
 
   h1,
   h3,
+  h4,
   ul,
   li{
     font-family: 'AlbertBlack';
+    text-align: center;
   }
 
+h5{
+    font-family: 'AlbertRegular';
+    margin-bottom: 15px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    line-height: 100%;
+}
+
+
+
 p{
+    font-family: 'AlbertRegular';
+    margin-bottom: 15px;
+    margin-top: 10px;
+    line-height: 140%;
+}
+
+.kontakt-text p{
+    font-family: 'AlbertRegular';
+    margin-bottom: 15px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    line-height: 100%;
+}
+
+.copyright p{
     font-family: 'AlbertRegular';
     margin-bottom: 15px;
     margin-top: 10px;
@@ -67,6 +96,11 @@ nav ul .dropdown li a {
   h3{
     font-size: 1.7rem;
     margin-top: 50px;
+} 
+
+h4{
+    font-size: 1rem;
+    margin-top: 10px;
 } 
 
 
@@ -106,6 +140,7 @@ nav ul .dropdown li a {
     min-width: 150px;
     visibility: hidden;
     padding: 10px;
+    z-index: 999;
 }
 
 .dropdown:hover .dropdown-menu {
@@ -144,6 +179,7 @@ nav ul .dropdown li a {
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
+    z-index: 9999;
 }
 
 .mobile-menu.active {
@@ -203,6 +239,7 @@ body.menu-open {
     background-color: #34495E;
     color: white;
     padding: 4% 5%;
+    margin-top: 70px;
   }
   
   .logo-footer{
@@ -243,7 +280,86 @@ body.menu-open {
     color: white;
 }
 
+/* LOTTIE FILE */
+.desktop-only{
+    display: none;
+}
 
+
+/* MAIN */
+.portfolio, .om-mig {
+    max-width: 80%;
+    margin: auto;
+}
+
+.cta {
+    background: #2f4356;
+    color: #fff;
+    padding: 0.75rem 1.25rem;
+    font-family: 'AlbertBlack';
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  /* CAROUSEL */
+  .carousel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #34495E;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .card {
+    max-width: 400px;
+    padding: 1.5rem;
+    background: #34495E;
+  }
+  
+  .card-tema {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-tema_nr {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    line-height: 140%;
+  }
+  
+  .cta-inverse {
+    background: white;
+    color: #2f4356;
+    padding: 0.75rem 1.5rem;
+    font-family: 'AlbertBlack';
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .arrow {
+    font-size: 2rem;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
 
 
 /* MEDIA QUERY */
@@ -276,6 +392,17 @@ body.menu-open {
 
     p{
         margin-bottom: 15px;
+        line-height: 130%;
+    }
+    
+    .kontakt-text p{
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+        line-height: 200%;
+    }
+    
+    .copyright p{
+        margin-bottom: 15px;
         letter-spacing: 1px;
         line-height: 200%;
     }
@@ -286,4 +413,49 @@ body.menu-open {
         margin-top: 0px;
     }
 
+    /* LOTTIE FILE */
+    .mobile-only{
+        display: none;
+    }
+
+    .desktop-only{
+        display: block;
+    }
+
+    /* GRID */
+    .portfolio{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 60px;
+    }
+
+    .portfolio h3{
+        margin-top: 20%;
+    }
+
+    .portfolio img{
+        padding: 40px;
+    }
+
+    .portfolio p{
+        margin-top: 20px;
+    }
+
+    .om-mig{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 60px;
+    }
+
+    .om-mig h3{
+        margin-top: 20%;
+    }
+
+    .om-mig img{
+        padding: 40px;
+    }
+
+    .om-mig p{
+        margin-top: 20px;
+    }
 }
