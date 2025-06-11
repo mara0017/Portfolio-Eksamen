@@ -129,7 +129,7 @@ h4{
 .nav-menu a {
     color: white;
     text-decoration: none;
-    letter-spacing: 10%;
+    letter-spacing: 2px;
 }
 
 /* DROPDOWN */
@@ -424,7 +424,6 @@ body.menu-open {
 
     .logo-menu{
         max-width: 7%;
-        padding-top: -20px;
     }
 
     .container-footer{
